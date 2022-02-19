@@ -2,6 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# To kick-start project please run 
+
+## yarn install
+after cloning the app into your local machine
+
 ## Available Scripts
 
 In the project directory, you can run:
