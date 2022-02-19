@@ -1,0 +1,9 @@
+ .select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("../../assets/icons/down.svg") !important;
+  background-repeat: no-repeat !important;
+  background-position-x: 95% !important;
+  background-position-y: 50% !important;
+ 
+}

@@ -1,0 +1,130 @@
+.input__select {
+	position: relative;
+	padding:15px;
+	background: #F2F3F4;
+}
+
+.input__select__input {
+	
+	background: #ffffff;
+	border: 1px solid #c4c4c4;
+	border-radius: 5px !important;
+	font-size: 14px;
+	text-align: left;
+	text-overflow: ellipsis;
+	line-height: 36px;
+	-webkit-appearance: none;
+	outline: none;
+	height: 30px;
+	display: block;
+	width: 100%;
+	cursor: pointer;
+}
+
+.input__select__select {
+	width: 100%;
+	z-index: 12;
+	position: absolute;
+	/* overflow-y: scroll; */
+}
+.input__select__options {
+	box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.185);
+	background: #101010;
+	list-style: none;
+	border-radius: 0px 0px 8px 8px;
+	margin-bottom: 0;
+	overflow-y: scroll;
+	max-height: 200px;
+}
+
+.input__select__row {
+	/* padding: 8px; */
+	color: #fff;
+}
+
+.input__select__option,
+.input__select__not-found {
+	color: #fff;
+	display: block;
+	height: 36px;
+	text-overflow: ellipsis;
+	line-height: 36px;
+	width: 90%;
+	border: none;
+	outline: none;
+	padding: 0 16px;
+	width: 100%;
+
+	text-align: left;
+	font-size: 14px;
+	text-align: left;
+	cursor: pointer;
+}
+
+.input__select__value {
+	position: relative;
+	z-index: 1;
+}
+.input__select__option.is-selected {
+	/* background: #2fcc8b; */
+	position: relative;
+	color: #fff;
+}
+
+.input__select__option.is-selected::after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	top: calc(50% - 10px);
+	right: 19px;
+	width: 8px;
+	height: 14px;
+}
+
+.input__select__option.is-selected::after {
+	transform: rotate(45deg);
+	border-right: 2px solid #ffcd36;
+	border-bottom: 2px solid #ffcd36;
+	pointer-events: none;
+}
+
+.input__select__option.is-highlighted,
+.input__select__option:not(.is-selected):hover {
+	/* background: rgba(47, 204, 139, 0.1); */
+}
+
+.input__select__option.is-highlighted.is-selected,
+.input__select__option.is-selected:hover {
+	/* background: #b8b8b8; */
+	color: #fff;
+}
+
+.input__select__value::after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	top: calc(50% - 7px);
+	right: 19px;
+	width: 10px;
+	height: 10px;
+}
+
+.input__select:not(.is-loading):not(.input__select--multiple)
+	.input__select__value::after {
+	transform: rotate(45deg);
+	border-right: 2px solid #000;
+	border-bottom: 2px solid #000;
+	pointer-events: none;
+}
+
+.input__select.is-loading .input__select__value::after {
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E%3Cpath fill='%232F2D37' d='M25,5A20.14,20.14,0,0,1,45,22.88a2.51,2.51,0,0,0,2.49,2.26h0A2.52,2.52,0,0,0,50,22.33a25.14,25.14,0,0,0-50,0,2.52,2.52,0,0,0,2.5,2.81h0A2.51,2.51,0,0,0,5,22.88,20.14,20.14,0,0,1,25,5Z'%3E%3CanimateTransform attributeName='transform' type='rotate' from='0 25 25' to='360 25 25' dur='0.6s' repeatCount='indefinite'/%3E%3C/path%3E%3C/svg%3E");
+	background-size: 11px;
+}
+
+.select__error {
+	width: 100%;
+	margin-top: 0.25rem;
+	font-size: 80%;
+	color: #28a745;
+}
